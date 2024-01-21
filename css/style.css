@@ -849,6 +849,10 @@ video {
   width: 1.75rem;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .min-w-\[240px\] {
   min-width: 240px;
 }
@@ -991,6 +995,14 @@ video {
 
 .gap-\[6px\] {
   gap: 6px;
+}
+
+.gap-28 {
+  gap: 7rem;
+}
+
+.gap-7 {
+  gap: 1.75rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -2086,6 +2098,10 @@ video {
 
   .lg\:gap-10 {
     gap: 2.5rem;
+  }
+
+  .lg\:gap-28 {
+    gap: 7rem;
   }
 
   .lg\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
