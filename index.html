@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,12 +11,13 @@
 
 <body class="text-gray-900">
   <!-- Nawigacja -->
-  <header class="w-full px-8 text-gray-700 bg-white">
-    <div class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
-      <div class="relative flex justify-between w-full md:flex-row">
+  <header class="sticky top-0 w-full px-8 text-gray-700 bg-[rgba(255,255,255,0.7)] backdrop-blur-lg z-[1]">
+    <div
+      class="container flex flex-col flex-wrap items-center justify-between py-4 md:py-5 mx-auto md:flex-row max-w-7xl">
+      <div class="relative flex justify-between items-center w-full md:flex-row">
         <a href="#_" class="flex items-center">
           <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" class="w-[50px] h-[50px] md:w-[80px] md:h-[80px]">
+            xmlns:xlink="http://www.w3.org/1999/xlink" class="w-[50px] h-[50px] md:w-[60px] md:h-[60px]">
             <rect width="80" height="80" fill="url(#pattern0)" />
             <defs>
               <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -27,11 +28,11 @@
             </defs>
           </svg>
           <div class="flex flex-col">
-            <div class="text-[26px] leading-[20px] md:text-[40px] md:leading-10 font-black text-gray-900 bg-white">
+            <div class="text-[26px] leading-[20px] md:text-[32px] md:leading-7 font-black text-gray-900">
               ARO S.C
             </div>
             <div
-              class="text-[14px] leading-[12px] md:text-[20px] md:leading-normal font-semibold text-white bg-indigo-800 text-center">
+              class="text-[14px] leading-[12px] md:text-[16px] md:leading-normal font-semibold text-white bg-indigo-800 text-center">
               WULKANIZACJA
             </div>
           </div>
@@ -42,16 +43,41 @@
           <a href="#o-nas" class="font-medium leading-6 text-gray-600 hover:text-indigo-800">O nas</a>
           <a href="#kontakt" class="font-medium leading-6 text-gray-600 hover:text-indigo-800">Kontakt</a>
         </nav>
-        <button aria-label="menu" class="block md:hidden p-1">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="w-8 h-8">
+        <div class="md:hidden">
 
-            <path d="M1 3v2h18V3zm0 8h18V9H1zm0 6h18v-2H1z" />
-          </svg>
+          <button id="menu" aria-label="Otwórz menu" class="block md:hidden p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="w-8 h-8">
 
-        </button>
+              <path d="M1 3v2h18V3zm0 8h18V9H1zm0 6h18v-2H1z" />
+            </svg>
+          </button>
+
+        </div>
       </div>
     </div>
   </header>
+  <!-- Mobilne menu -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-[rgba(255,255,255,0.7)] backdrop-blur-lg">
+    <button id="close-menu" aria-label="Zamknij menu" class="absolute top-6 right-9 z-[1]">
+      <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        fill="currentColor" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 512 512"
+        xml:space="preserve">
+        <g>
+          <g>
+            <polygon
+              points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512     512,452.922 315.076,256   " />
+          </g>
+        </g>
+      </svg>
+    </button>
+    <nav class="absolute inset-0 flex flex-col justify-center items-center gap-8 text-xl">
+      <a href="#cennik-uslugi" class="font-medium text-4xl leading-6 text-gray-600 hover:text-indigo-800">Cennik /
+        Usługi</a>
+      <a href="#opinie" class="font-medium text-4xl leading-6 text-gray-600 hover:text-indigo-800">Opinie</a>
+      <a href="#o-nas" class="font-medium text-4xl leading-6 text-gray-600 hover:text-indigo-800">O nas</a>
+      <a href="#kontakt" class="font-medium text-4xl leading-6 text-gray-600 hover:text-indigo-800">Kontakt</a>
+    </nav>
+  </div>
 
   <!-- Hero  -->
   <section class="px-8 py-16 bg-white md:py-32">
@@ -64,10 +90,8 @@
           </div>
         </div>
         <div class="lg:w-1/2 lg:pl-10">
-          <div
-            class="w-full space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 lg:pl-0 md:pb-0">
-            <h1
-              class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl  md:text-5xl xl:text-6xl">
+          <div class="w-full space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 lg:pl-0 md:pb-0">
+            <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl  md:text-5xl xl:text-6xl">
               <span class="block xl:inline">Dajemy drugie życie</span>
               <span class="block text-indigo-700 xl:inline">Twoim oponom.</span>
             </h1>
@@ -76,12 +100,12 @@
               termin lub zrób to przez stronę wymianaopon.pl
             </p>
             <div class="relative flex flex-col-reverse sm:flex-row gap-5 flex-wrap">
-              <a href="#_"
+              <a href="https://wymianaopon.pl/serwis/1204/" target="_blank"
                 class="box-border flex items-center self-start w-full sm:w-auto sm:min-w-0 shrink-0 justify-center px-6 py-3  whitespace-nowrap text-lg text-indigo-800 outline outline-1 outline-indigo-700 outline-offset-[-1px] hover:bg-indigo-50 hover:text-indigo-900 rounded-full focus-visible:ring-2 focus-visible:ring-offset-4">
                 Wymianaopon.pl
               </a>
 
-              <a href="#_"
+              <a href="tel:+48 601586046"
                 class="flex items-center self-start w-full sm:w-auto sm:min-w-0 shrink-0 justify-center px-6 py-3  whitespace-nowrap text-lg text-white bg-indigo-700 sm:mb-0 hover:bg-indigo-600 rounded-full focus-visible:ring-2 focus-visible:ring-offset-4 outline-none">
                 Dzwonię i umawiam
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none"
@@ -125,7 +149,9 @@
       </div>
     </div>
   </section>
-  <div class="hidden lg:block h-56 w-full bg-[url(../img/tires-banner.png)] bg-cover relative after:absolute after:inset-0 after:bg-gradient-to-b from-indigo-600 to-transparent after:opacity-40"></div>
+  <div
+    class="hidden lg:block h-56 w-full bg-[url(../img/tires-banner.png)] bg-cover relative after:absolute after:inset-0 after:bg-gradient-to-b from-indigo-600 to-transparent after:opacity-40">
+  </div>
 
   <!-- Cennik / Uslugi  -->
   <section class="w-full bg-gray-50 py-16 md:pt-20 md:pb-24 lg:pt-32" id="cennik-uslugi">
@@ -313,7 +339,7 @@
   </section>
 
   <!-- Opinie -->
-  <section id="opinie" class="flex items-center justify-center px-8 py-16 bg-white min-w-screen">
+  <section id="opinie" class="scroll-my-20 flex items-center justify-center px-8 py-16 bg-white min-w-screen">
     <div class="bg-white">
       <div class="container flex flex-col items-start mx-auto sm:items-center">
         <p
@@ -394,29 +420,38 @@
   </section>
 
   <!-- O nas -->
-  <section id="opinie" class="flex items-center justify-center px-8 py-16 bg-gray-50 min-w-screen">
-    <div class="container flex justify-center flex-col-reverse lg:flex-row gap-12 lg:gap-28 items-start mx-auto sm:items-center">
+  <section id="o-nas" class="scroll-my-20 flex items-center justify-center px-8 py-16 bg-gray-50 min-w-screen">
+    <div
+      class="container flex justify-center flex-col-reverse lg:flex-row gap-12 lg:gap-28 items-start mx-auto sm:items-center">
       <div class="flex flex-col gap-5">
         <h5 class="text-xl font-semibold leading-tight md:text-2xl lg:text-3xl">Działamy od 1998 roku!</h5>
         <p class="max-w-lg leading-7 text-gray-700 lg:text-lg">
-          Cieszymy się, że  bla blabla lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Cieszymy się, że bla blabla lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+          esse cillum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+          dicta sunt explicabo.
         </p>
       </div>
-        <img src="./img/tire-stack.png" class="w-full max-w-md" />
-      </div>
+      <img src="./img/tire-stack.png" class="w-full max-w-md" />
+    </div>
   </section>
   <!-- Kontakt -->
 
-  <section id="kontakt" class="px-8 py-16 bg-white min-w-screen">
+  <section id="kontakt" class="scroll-my-20 px-8 py-16 bg-white min-w-screen">
     <div class="w-full bg-white">
       <div>
-        <h1 class="mb-4 text-3xl sm:text-4xl text-left sm:text-center font-bold leading-tight tracking-tight font-heading">Czekamy na Ciebie tutaj.</h1>
+        <h1
+          class="mb-4 text-3xl sm:text-4xl text-left sm:text-center font-bold leading-tight tracking-tight font-heading">
+          Czekamy na Ciebie tutaj.</h1>
       </div>
 
       <div class="w-full flex flex-wrap items-center gap-8 justify-center mx-auto mt-16">
         <div class="w-full max-w-[380px] lg:max-w-xl shadow-lg rounded-xl overflow-hidden border border-gray-300">
+
           <iframe class="w-full h-auto aspect-square lg:aspect-video"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.849016264906!2d21.077133099999994!3d52.209791200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd6f4597257d%3A0xd4149eee8331b2c8!2sKoszykarska%204%2C%2000-704%20Warszawa!5e0!3m2!1sen!2spl!4v1705329306346!5m2!1sen!2spl"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.849016264906!2d21.077133099999994!3d52.209791200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd0e03fe15e5%3A0x4a8e5c7422fd2a85!2sWulkanizacja%20ARO!5e0!3m2!1sen!2spl!4v1705867252573!5m2!1sen!2spl"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -430,7 +465,8 @@
                   <path
                     d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
                 </svg>
-                <a href="#" class="text-blue-600 hover:underline">Koszykarska 4, 00-704 Warszawa</a>
+                <a href="https://maps.app.goo.gl/kfyBBE4vf3PM6RQr7" target="_blank"
+                  class="text-blue-600 hover:underline">Koszykarska 4, 00-704 Warszawa</a>
               </div>
               <div class="flex items-center gap-3">
                 <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
@@ -438,7 +474,7 @@
                   <path
                     d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
                 </svg>
-                <a href="#" class="text-blue-600 hover:underline">601586046</a>
+                <a href="tel:+48 601586046" class="text-blue-600 hover:underline">601586046</a>
               </div>
               <div class="flex items-center gap-3">
                 <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
@@ -446,7 +482,7 @@
                   <path
                     d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
                 </svg>
-                <a href="#" class="text-blue-600 hover:underline">arowulkanizacja@wp.pl</a>
+                <a href="mailto:arowulkanizacja@wp.pl" class="text-blue-600 hover:underline">arowulkanizacja@wp.pl</a>
               </div>
               <div class="flex items-center gap-3">
                 <svg class="w-6 h-6 -ml-[1px]" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
@@ -454,7 +490,8 @@
                     d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
                     clip-rule="evenodd"></path>
                 </svg>
-                <a href="#" class="text-blue-600 hover:underline -ml-1 pl-[1px]">Facebook</a>
+                <a href="https://www.facebook.com/profile.php?id=100092218324020" target="_blank"
+                  class="text-blue-600 hover:underline -ml-1 pl-[1px]">Facebook</a>
               </div>
             </div>
           </div>
@@ -506,7 +543,29 @@
       </p>
     </div>
   </footer>
-
+  <style>
+    html.menu-open #mobile-menu {
+      display: block;
+    }
+  </style>
+  <script>
+    const menuButton = document.querySelector('#menu');
+    const closeMenuButton = document.querySelector('#close-menu');
+    const htmlTag = document.querySelector('html');
+    // Add "data-menu-open" to html tag when menu button is clicked
+    menuButton.addEventListener('click', () => {
+      htmlTag.classList.add('menu-open');
+    });
+    closeMenuButton.addEventListener('click', () => {
+      htmlTag.classList.remove('menu-open');
+    });
+    const mobileMenuItems = document.querySelectorAll('#mobile-menu a');
+    mobileMenuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        htmlTag.classList.remove('menu-open');
+      });
+    });
+  </script>
 
 </body>
 
