@@ -2253,6 +2253,14 @@ video {
     padding-top: 8rem;
   }
 
+  .lg\:pl-12 {
+    padding-left: 3rem;
+  }
+
+  .lg\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
